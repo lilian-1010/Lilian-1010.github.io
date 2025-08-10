@@ -1,76 +1,95 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>我的个人网站</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+            color: white;
+            line-height: 1.6;
         }
 
         /* Header */
         header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
+            padding: 3rem;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
             text-align: center;
+            border-bottom: 4px solid #ff6347; /* Orange underline */
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 4rem;
             margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* Navigation */
         nav {
-            background-color: #444;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 1rem;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1.1rem;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
         }
 
         nav a:hover {
+            color: #ff6347; /* Orange hover effect */
             text-decoration: underline;
         }
 
         /* Main Content */
         main {
-            padding: 2rem;
+            padding: 4rem 2rem;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 900px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
         }
 
         .section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for cards */
         }
 
         .section h2 {
-            font-size: 2rem;
-            color: #333;
+            font-size: 2.5rem;
+            color: #ff6347; /* Orange title */
+            margin-bottom: 1rem;
         }
 
         .section p {
             font-size: 1.2rem;
-            color: #666;
+            color: #f4f4f4;
         }
 
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -78,7 +97,7 @@
 
         /* Button Style */
         .btn {
-            background-color: #4CAF50;
+            background-color: #ff6347;
             color: white;
             padding: 1rem 2rem;
             font-size: 1.2rem;
@@ -86,11 +105,42 @@
             border-radius: 5px;
             text-decoration: none;
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .btn:hover {
-            background-color: #45a049;
+            background-color: #ff4500; /* Dark orange on hover */
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header, main, footer {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            .section {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -98,14 +148,14 @@
 
     <!-- Header -->
     <header>
-        <h1>欢迎来到我的个人网站</h1>
+        <h1>Welcome to My Personal Website</h1>
     </header>
 
     <!-- Navigation -->
     <nav>
-        <a href="#about">关于我</a>
-        <a href="#interests">兴趣爱好</a>
-        <a href="#contact">联系方式</a>
+        <a href="#about">About Me</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Main Content -->
@@ -113,26 +163,26 @@
         <!-- About Me Section -->
         <section id="about" class="section">
             <h2>About Me</h2>
-            <p>我毕业于浙江传媒学院播音主持专业，目前正在北海道大学攻读修士学位。</p>
+            <p>I graduated from Zhejiang Media College with a major in Broadcast and Hosting, and I am currently pursuing a Master's degree at Hokkaido University.</p>
         </section>
 
         <!-- Interests Section -->
         <section id="interests" class="section">
             <h2>Interests & Hobbies</h2>
-            <p>我喜欢旅游、手作、电影和追星。我认为这些爱好让我更好地了解世界，享受生活。</p>
+            <p>I enjoy traveling, crafting, watching movies, and being a fan of celebrities. These hobbies allow me to explore the world and enjoy life to the fullest.</p>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>你可以通过以下电子邮件联系我：</p>
-            <p>Email: <a href="mailto:huatianchuanqi@gmail.com">huatianchuanqi@gmail.com</a></p>
+            <p>You can reach me via the following email:</p>
+            <p>Email: <a href="mailto:huatianchuanqi@gmail.com" class="btn">Send me an email</a></p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 我的个人网页</p>
+        <p>© 2025 My Personal Website</p>
     </footer>
 
 </body>
